@@ -1,0 +1,65 @@
+@local=http://localhost:3000
+
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2YyN2NlNDU4MGM1OWEwZTI3MmYzZGYiLCJiaXoiOiI2M2YyN2NlNDU4MGM1OWEwZTI3MmYzZGYiLCJpYXQiOjE2NzY4MzYxNTN9.gn38itSHh0trfDGDo544R6DMRBvVFzshp7vHrIgJ_ZM
+### create User
+POST  {{local}}/user/
+Content-Type: application/json
+
+{
+    "name": "Eli",
+    "email": "Eli@Dev.com",
+    "password": "87654321",
+    "biz": true
+}
+
+### Authenticate User
+POST {{local}}/auth/
+Content-Type: application/json
+
+{
+    "email": "Eli@Dev.com",
+    "password": "87654321"
+}
+
+### get user info
+GET {{local}}/user/myinfo
+x-auth-token: {{token}}
+
+### create new card
+
+POST  {{local}}/card/create-card
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+    "bizName": "peersBest",
+    "bizDescription": "Best peersJuice in Isreal",
+    "bizAddress": "Kiss my 2st street",
+    "bizPhone": "0531234567"
+    
+}
+
+### get all cards
+GET {{local}}/card/all-cards
+x-auth-token: {{token}}
+
+### get spesific cardby id
+
+GET {{local}}/card/63f27d78d20e43063a2e3a7e
+x-auth-token: {{token}}
+
+### update card
+PUT  {{local}}/card/63f27d78d20e43063a2e3a7e
+x-auth-token: {{token}}
+Content-Type: application/json
+
+{
+    "bizName": "LemoBest111111111",
+    "bizDescription": "Best limondae in Isreal11111111111111",
+    "bizAddress": "Kiss my 1st street11111111111",
+    "bizPhone": "0531234567"
+}
+
+### delete card
+DELETE {{local}}/card/63f27d78d20e43063a2e3a7e
+x-auth-token: {{token}}
