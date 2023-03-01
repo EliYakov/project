@@ -6,9 +6,9 @@ POST  {{local}}/user/
 Content-Type: application/json
 
 {
-    "name": "Eli",
-    "email": "Eli@Dev.com",
-    "password": "87654321",
+    "name": "",
+    "email": "",
+    "password": "",
     "biz": true
 }
 
@@ -17,8 +17,8 @@ POST {{local}}/auth/
 Content-Type: application/json
 
 {
-    "email": "Eli@Dev.com",
-    "password": "87654321"
+    "email": "",
+    "password": ""
 }
 
 ### get user info
@@ -32,10 +32,10 @@ Content-Type: application/json
 x-auth-token: {{token}}
 
 {
-    "bizName": "peersBest",
-    "bizDescription": "Best peersJuice in Isreal",
-    "bizAddress": "Kiss my 2st street",
-    "bizPhone": "0531234567"
+    "bizName": "",
+    "bizDescription": "",
+    "bizAddress": "",
+    "bizPhone": ""
     
 }
 
@@ -54,10 +54,10 @@ x-auth-token: {{token}}
 Content-Type: application/json
 
 {
-    "bizName": "LemoBest111111111",
-    "bizDescription": "Best limondae in Isreal11111111111111",
-    "bizAddress": "Kiss my 1st street11111111111",
-    "bizPhone": "0531234567"
+    "bizName": "",
+    "bizDescription": "",
+    "bizAddress": "",
+    "bizPhone": ""
 }
 
 ### delete card
