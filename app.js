@@ -19,18 +19,7 @@ mongoose
   .then(() => console.log("connected to mongoDB"))
   .catch((err) => console.log("could not connect mongoDB", err));
 
-// app.get("/test", async (req, res) => {
-//   const u = new User({
-//     name: "dsdsdsds",
-//     password: "124548464",
-//     email: "dasdsad@dsdsa.com",
-//     biz: true,
-//   });
 
-//   u.save();
-
-//   res.send("hello");
-// });
 
 app.use("/user", userRouter);
 app.use("/auth", authRouter);
